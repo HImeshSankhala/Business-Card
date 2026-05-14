@@ -18,7 +18,15 @@ Then open:
 http://localhost:5173
 ```
 
-For phone testing, host the folder over HTTPS or deploy it to GitHub Pages, Netlify, Vercel, or Cloudflare Pages. Camera access on phones usually requires HTTPS.
+For phone testing on the same Wi-Fi, use the `Phone URL on same Wi-Fi` printed by the server, for example:
+
+```text
+http://192.168.0.104:5173
+```
+
+If your phone cannot reach that URL, check that both devices are on the same Wi-Fi and allow Node.js through Windows Firewall for private networks.
+
+For final phone camera testing, host the folder over HTTPS or deploy it to GitHub Pages, Netlify, Vercel, or Cloudflare Pages. Camera access on phones usually requires HTTPS.
 
 ## Test Marker
 
