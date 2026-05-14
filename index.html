@@ -18,6 +18,7 @@
           This first prototype checks the most important technical question:
           can the browser camera recognize a printed pattern and lock a 3D object to it?
         </p>
+        <p class="notice" id="compat-message" hidden></p>
         <div class="actions">
           <button class="primary" id="start-ar" type="button">Start camera</button>
           <a class="secondary" href="./marker.html" target="_blank" rel="noreferrer">Open marker</a>
@@ -31,36 +32,7 @@
         <span id="tracking-status">Waiting for camera</span>
       </div>
       <button class="exit" id="stop-ar" type="button" aria-label="Exit AR">Exit</button>
-
-      <a-scene
-        id="scene"
-        embedded
-        vr-mode-ui="enabled: false"
-        renderer="antialias: true; alpha: true; colorManagement: true"
-        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-      >
-        <a-marker id="hiro-marker" preset="hiro">
-          <a-box
-            position="0 0.5 0"
-            rotation="0 45 0"
-            depth="1"
-            height="1"
-            width="1"
-            color="#21d4fd"
-            material="roughness: 0.35; metalness: 0.15"
-            animation="property: rotation; to: 0 405 0; dur: 2800; easing: linear; loop: true"
-          ></a-box>
-          <a-plane
-            position="0 0 0"
-            rotation="-90 0 0"
-            width="1.35"
-            height="1.35"
-            color="#101820"
-            opacity="0.45"
-          ></a-plane>
-        </a-marker>
-        <a-entity camera></a-entity>
-      </a-scene>
+      <div id="ar-scene-root"></div>
     </section>
 
     <script src="./src/app.js"></script>

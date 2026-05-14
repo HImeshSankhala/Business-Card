@@ -60,6 +60,17 @@ h1 {
   line-height: 1.55;
 }
 
+.notice {
+  max-width: 54ch;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 205, 92, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 205, 92, 0.12);
+  color: #ffe3a3;
+  line-height: 1.45;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -106,6 +117,11 @@ h1 {
 }
 
 .ar-stage a-scene {
+  width: 100vw;
+  height: 100vh;
+}
+
+#ar-scene-root {
   width: 100vw;
   height: 100vh;
 }

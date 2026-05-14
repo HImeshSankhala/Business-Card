@@ -18,7 +18,7 @@ Then open:
 http://localhost:5173
 ```
 
-For phone testing on the same Wi-Fi, use the `Phone URL on same Wi-Fi` printed by the server, for example:
+For desktop smoke testing or viewing the marker on another device, use the `Phone URL on same Wi-Fi` printed by the server, for example:
 
 ```text
 http://192.168.0.104:5173
@@ -26,7 +26,15 @@ http://192.168.0.104:5173
 
 If your phone cannot reach that URL, check that both devices are on the same Wi-Fi and allow Node.js through Windows Firewall for private networks.
 
-For final phone camera testing, host the folder over HTTPS or deploy it to GitHub Pages, Netlify, Vercel, or Cloudflare Pages. Camera access on phones usually requires HTTPS.
+For phone camera testing, use HTTPS. Mobile browsers usually block camera access on plain LAN URLs like `http://192.168...`.
+
+After GitHub Pages is enabled, the test URL should be:
+
+```text
+https://himeshsankhala.github.io/Business-Card/
+```
+
+In GitHub, go to **Settings > Pages**, set the source to **GitHub Actions**, then let the deploy workflow run.
 
 ## Test Marker
 
